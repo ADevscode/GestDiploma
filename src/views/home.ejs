@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding:0;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <h1>bem  vindo a pagina inicial</h1>
+    <form action="/estudante/new" method="post">
+        <div class="formcontrol">
+            <label for="">Nome</label>
+            <input type="text" class="control_inp" name="nome">
+        </div>
+        <div class="formcontrol">
+            <label for="">Nº de Identidade</label>
+            <input type="text" class="control_inp" name="bi">
+        </div>
+        <div class="formcontrol">
+            <label for="">Genero</label>
+            <select name="genero" id="" class="control_inp">
+                <option value="Masculino">Masculino</option>
+                <option value="Feminino">Feminino</option>
+            </select>
+        </div>
+        <div class="formcontrol">
+            <label for="">Naturalidade</label>
+            <input type="text" class="control_inp" name="naturalidade">
+            
+        </div>
+        <input type="submit" value="Enviar os Dados">
+    </form>
+    <table>
+        <thead>
+            <th>Nome</th>
+            <th>BI</th>
+            <th>Genero</th>
+            <th>Naturalidade</th>
+        </thead>
+        <tbody>
+            <% Lista.forEach(linha=>{%>
+                <tr>
+                    <td><%=linha.nome%></td>
+                    <td><%=linha.bi%></td>
+                    <td><%=linha.genero%></td>
+                    <td><%=linha.naturalidade%></td>
+                </tr>
+            <%})%>
+           
+        </tbody>
+    </table>
+
+</body>
+</html>

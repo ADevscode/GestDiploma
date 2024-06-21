@@ -1,17 +1,16 @@
 //importação das dependecias
 const express = require('express')
-const routa_estudante =require('../router/routa_estudante')
-const database = require('../database/connection')
+const bodyParser =require('body-parser')
+const routa_estudante =require('../router/routa_estudante') 
 
 const app  = express()
-app.use(express.json())
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended:false}))
+app.use(express.static('public'))
+app.set('view engine','ejs')
 
 //definindo as rotas da aplicação
-app.get('/',(req,res)=>{
-    res.send('Bem vindo a routa princiapal')
-})
-
-
+app.use('/',routa_estudante) 
 //
 const port  = 3001;
 app.listen(port,(erro)=>{
