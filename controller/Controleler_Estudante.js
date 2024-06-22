@@ -20,14 +20,14 @@ const Novo_Registo = async (req,res,erro)=>{
             genero:req.body.genero,
             naturalidade:req.body.naturalidade 
         })
-        res.status(200).json({novo}) 
+        //res.status(200).json({novo})
+        res.status(200).redirect('/')
 
     } catch (error) {
 
         res.status(500).json({
             mesage:' Não foi possivel salvar um novo Registo '+error
         })
-        
     }
 }
 
