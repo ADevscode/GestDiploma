@@ -1,0 +1,39 @@
+{
+    "openapi":"3.0.0",
+    "info":{
+        "title":"api unikivi",
+        "description":"Api de manipulação de registo de diplma",
+        "termsOfservice":"localhost:3001/docs",
+        "contact":{
+            "email":"adevcodedesigener@gmail.com"
+        },
+        "version":"1.0.0"
+    },
+    "servers": [  
+        {
+            "url":"https://bug-free-space-palm-tree-jj4jvvv75qwrfp456-3001.app.github.dev",
+            "description":"Url de desenvolvimento"
+        }
+    ],
+    "paths":{
+        "/estudante/new":{
+            "post":{
+                "summary":"Registo de novo candidado",
+                "description":"rota para adicionar no registo",
+                "tags":["candidato"],
+                "requestBody":{
+                    "content":{
+                        "application/json":{
+                            "schema":{
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components":{
+        
+    }
+}
